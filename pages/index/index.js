@@ -1,9 +1,24 @@
-//index.js
 const app = getApp()
 import config from '../../config/config'
 Page({
   data: {
-
+    menuList:[{
+      name:'制空带路速查',
+      link:'/pages/mapsearch/mapsearch',
+      icon:'query'
+    },{
+      name:'远征查询',
+      link:'/pages/expedition/expedition',
+      icon:'query'
+    },{
+      name:'POI掉落统计',
+      link:'/pages/poidb/poidb',
+      icon:'statistics'
+    },{
+      name:'明石改修工厂',
+      link:'/pages/akashilist/akashilist',
+      icon:'akashi'
+    }]
   },
   onLoad: function () {
     wx.request({
@@ -18,7 +33,6 @@ Page({
       },
       success: (res) => {
         if (res.data.status == "success") {
-          console.log(config);
           config.setApiBase('https://exp.wx.kcwiki.org');
         }
         else if ( res.data.status == "error" ) {

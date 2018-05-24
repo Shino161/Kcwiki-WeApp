@@ -3,31 +3,11 @@
     <image style="width: 160px; height: 160px; display:block; margin:auto" mode="aspectFill" src="../../asset/img/logo.png"></image>
   </view>
   <view class="nav">
-    <navigator url="/pages/mapsearch/mapsearch" hover-class="navigator-hover" class="navi">
+    <navigator url="{{item.link}}" hover-class="navigator-hover" class="navi" wx:for="{{menuList}}">
       <view>
-        <view class="nav-item-block" style="background-color: #3d4456"></view>
-        <span class="nav-item-text">制空带路速查</span>
-      </view>
-      <div class="item-right-arrow"></div>
-    </navigator>
-    <navigator url="/pages/expedition/expedition" hover-class="navigator-hover" class="navi">
-      <view>
-        <view class="nav-item-block" style="background-color: #3d4456"></view>
-        <span class="nav-item-text">远征查询</span>
-      </view>
-      <div class="item-right-arrow"></div>
-    </navigator>
-    <navigator url="/pages/poidb/poidb" hover-class="navigator-hover" class="navi">
-      <view>
-        <view class="nav-item-block" style="background-color: #3d4456"></view>
-        <span class="nav-item-text">POI掉落统计</span>
-      </view>
-      <div class="item-right-arrow"></div>
-    </navigator>
-    <navigator url="/pages/akashilist/akashilist" hover-class="navigator-hover" class="navi">
-      <view>
-        <view class="nav-item-block" style="background-color: #3d4456"></view>
-        <span class="nav-item-text">明石改修工厂</span>
+        <!-- <view class="nav-item-block" style="background-color: #3d4456"></view> -->
+        <image src="/asset/img/{{item.icon}}.png" class="nav-item-icon"></image>
+        <span class="nav-item-text">{{item.name}}</span>
       </view>
       <div class="item-right-arrow"></div>
     </navigator>
