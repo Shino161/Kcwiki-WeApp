@@ -20,8 +20,15 @@
 			"current": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"plugin": {
 			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -40,6 +47,11 @@
 					"name": "poi掉落",
 					"pathName": "pages/poidb/poidb",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "制空查询",
+					"pathName": "pages/mapsearch/mapsearch"
 				}
 			]
 		}

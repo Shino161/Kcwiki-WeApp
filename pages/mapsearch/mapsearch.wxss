@@ -1,4 +1,35 @@
-/**poidb.wxss**/
+.pop-layer {
+  position: absolute;
+  background-color: #fff;
+  z-index: 2;
+  width: 100%;
+}
+.pop-layer>span{
+  display: block;
+  text-align: center;
+}
+.top-select {
+  position: relative;
+}
+.top-select .more-icon {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+}
+.top-select .high-light-bar {
+  height: 48px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  display: block;
+  background-color: #134663;
+  color: #fff;
+  border-radius: 0px 0px 50% 50%;
+}
 
 .title{
   display:block;

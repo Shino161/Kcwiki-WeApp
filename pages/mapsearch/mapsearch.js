@@ -3,8 +3,9 @@ const app = getApp();
 Page({
   data: {
     animationData: {},
-    pageData:[],
-    blockVisiable:''
+    pageData: [],
+    areaIndex: 0,
+    navTitle: []
   },
   showContent: function(event){
     this.setData({
@@ -25,8 +26,16 @@ Page({
       success: (res) => {
         if (res.data.status == "success") {
           console.log(res.data.data)
+          // trans Object to Array
+          var navTitle = []
+          for (var i in res.data.data) {
+            if (res.data.data.hasOwnProperty(i)) {
+              navTitle.push(i)
+            }
+          }
           this.setData({
-            pageData: res.data.data
+            pageData: res.data.data,
+            navTitle: navTitle
           });
         }
         else if ( res.data.status == "error" ) {
